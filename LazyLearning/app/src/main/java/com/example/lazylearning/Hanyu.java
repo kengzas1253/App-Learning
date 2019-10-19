@@ -10,7 +10,7 @@ import android.view.View;
 import br.com.bloder.magic.view.MagicButton;
 
 public class Hanyu extends AppCompatActivity {
-    CardView p1;
+    CardView p1,p2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,14 @@ public class Hanyu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent P1 = new Intent(Hanyu.this,Pinyin.class);
                 startActivity(P1);
+            }
+        });
+        p2= (CardView) findViewById(R.id.chiDic);
+        p2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent P2 = new Intent(Hanyu.this,ChineseDic.class);
+                startActivity(P2);
             }
         });
     }
